@@ -94,15 +94,34 @@ export default function HeroSection() {
         className="mt-10 flex w-full flex-col items-center gap-4"
       >
         <WaitlistForm buttonLabel="Join beta" />
-        <a
-          href="#how"
-          className="group inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"
-        >
-          See how it works
-          <span className="transition-transform duration-300 group-hover:translate-y-0.5">
-            ↓
-          </span>
-        </a>
+        <div className="flex items-center gap-5">
+          <a
+            href="/downloads/Mori-0.1.0-beta.zip"
+            download
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-forest transition-colors hover:text-ink"
+          >
+            <svg width="12" height="13" viewBox="0 0 15 16" fill="none" aria-hidden="true">
+              <path
+                d="M7.5 1v9m0 0L4 6.7M7.5 10L11 6.7M2 12.5h11"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Download beta for macOS
+          </a>
+          <span className="text-border">·</span>
+          <a
+            href="#how"
+            className="group inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"
+          >
+            See how it works
+            <span className="transition-transform duration-300 group-hover:translate-y-0.5">
+              ↓
+            </span>
+          </a>
+        </div>
       </motion.div>
 
       {/* microcopy */}

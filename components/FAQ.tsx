@@ -7,7 +7,7 @@ import { Reveal } from "./AnimatedText";
 const FAQS = [
   {
     q: "Is Mori available now?",
-    a: "Mori is opening a private Mac beta soon.",
+    a: "Yes — Mori 0.1.0 is in private beta. You can download the Mac beta below, add your own AI provider key, and start using ⌥M right away.",
   },
   {
     q: "Is Mori Mac-only?",

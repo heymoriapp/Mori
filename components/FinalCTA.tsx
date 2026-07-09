@@ -74,8 +74,58 @@ export default function FinalCTA() {
           type, and draft replies with the context already there.
         </p>
         <div className="mt-9 flex flex-col items-center">
-          <WaitlistForm buttonLabel="Join beta" size="lg" />
-          <p className="mt-4 text-sm text-muted">
+          {/* direct beta download */}
+          <a
+            href="/downloads/Mori-0.1.0-beta.zip"
+            download
+            className="group inline-flex items-center gap-2.5 rounded-full bg-forest px-7 py-3.5 text-base font-medium text-background shadow-soft transition-colors duration-300 hover:bg-[#263d2d]"
+          >
+            <svg width="15" height="16" viewBox="0 0 15 16" fill="none" aria-hidden="true">
+              <path
+                d="M7.5 1v9m0 0L4 6.7M7.5 10L11 6.7M2 12.5h11"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Download Mori beta for macOS
+          </a>
+          <p className="mt-3 font-mono text-xs text-muted">
+            v0.1.0 · macOS 14+ · Apple Silicon · 1.3 MB
+          </p>
+
+          {/* install steps */}
+          <div className="mt-6 w-full max-w-md rounded-2xl border border-border bg-background/70 p-4 text-left">
+            <p className="label mb-2.5 text-forest">Install in 30 seconds</p>
+            <ol className="space-y-1.5 text-sm leading-relaxed text-muted">
+              <li>
+                <span className="font-medium text-ink">1.</span> Unzip and drag{" "}
+                <span className="text-ink">Mori.app</span> into Applications.
+              </li>
+              <li>
+                <span className="font-medium text-ink">2.</span>{" "}
+                <span className="text-ink">Right-click → Open</span> the first time
+                (the beta isn&rsquo;t notarized yet).
+              </li>
+              <li>
+                <span className="font-medium text-ink">3.</span> Add your AI key in
+                Preferences, then press{" "}
+                <span className="font-mono text-xs text-forest">⌥M</span> anywhere.
+              </li>
+            </ol>
+          </div>
+
+          <div className="mt-7 w-full max-w-md border-t border-border pt-6">
+            <p className="mb-3 text-sm text-muted">
+              Or get updates as the beta evolves:
+            </p>
+            <div className="flex justify-center">
+              <WaitlistForm buttonLabel="Join beta" />
+            </div>
+          </div>
+
+          <p className="mt-5 text-sm text-muted">
             Mac-first. Memories stored locally by default. AI processing depends
             on your selected provider.
           </p>
