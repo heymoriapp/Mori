@@ -8,27 +8,28 @@ const COLUMNS = [
   {
     title: "Product",
     links: [
-      { label: "How it works", href: "#how" },
-      { label: "Memory", href: "#memory" },
-      { label: "Privacy", href: "#privacy" },
-      { label: "FAQ", href: "#faq" },
+      { label: "How it works", href: "/#how" },
+      { label: "Memory", href: "/#memory" },
+      { label: "Download beta", href: "/download" },
+      { label: "Changelog", href: "/changelog" },
+      { label: "FAQ", href: "/#faq" },
     ],
   },
   {
-    title: "Company",
+    title: "Resources",
     links: [
-      { label: "Beta", href: "#beta" },
+      { label: "Documentation", href: "/docs" },
+      { label: "Support", href: "/support" },
       { label: "Contact", href: "mailto:hello@heymori.app" },
-      { label: "Terms", href: "#" },
-      { label: "Privacy", href: "#privacy" },
+      { label: "GitHub", href: "https://github.com/heymoriapp/Mori" },
     ],
   },
   {
-    title: "Social",
+    title: "Legal",
     links: [
-      { label: "X", href: "#" },
-      { label: "Product Hunt", href: "#" },
-      { label: "GitHub", href: "#" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Use", href: "/terms" },
+      { label: "Privacy by design", href: "/#privacy" },
     ],
   },
 ];

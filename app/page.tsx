@@ -14,10 +14,14 @@ import NarrativeTransition from "@/components/NarrativeTransition";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import MarketingPopup from "@/components/MarketingPopup";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <SmoothScroll>
+      <ScrollProgress />
+      <MarketingPopup />
       <Header />
       <main>
         <HeroSection />

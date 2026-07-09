@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import AnimatedText from "./AnimatedText";
 import FloatingReplyCard from "./FloatingReplyCard";
 import WaitlistForm from "./WaitlistForm";
+import { openDownloadModal } from "./DownloadModal";
 import MoriCharacter from "./MoriCharacter";
 import { Spores } from "./ForestAtmosphere";
 import { usePrefersReducedMotion } from "@/lib/hooks";
@@ -97,7 +98,10 @@ export default function HeroSection() {
         <div className="flex items-center gap-5">
           <a
             href="/downloads/Mori-0.1.0-beta.zip"
-            download
+            onClick={(e) => {
+              e.preventDefault();
+              openDownloadModal();
+            }}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-forest transition-colors hover:text-ink"
           >
             <svg width="12" height="13" viewBox="0 0 15 16" fill="none" aria-hidden="true">

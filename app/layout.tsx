@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import DownloadModal from "@/components/DownloadModal";
 import "./globals.css";
 
 const serif = Fraunces({
@@ -24,7 +25,10 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://heymori.app"),
-  title: "mori — a little memory spirit for your Mac",
+  title: {
+    default: "mori — a little memory spirit for your Mac",
+    template: "%s · mori",
+  },
   description:
     "Press ⌥M anywhere you type. Mori recalls your recent work, understands the thread, and drafts a reply in your tone. Private by design. Mac-first.",
   keywords: [
@@ -61,7 +65,10 @@ export default function RootLayout({
       lang="en"
       className={`${serif.variable} ${sans.variable} ${mono.variable}`}
     >
-      <body className="paper-grain antialiased">{children}</body>
+      <body className="paper-grain antialiased">
+        {children}
+        <DownloadModal />
+      </body>
     </html>
   );
 }

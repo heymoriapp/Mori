@@ -28,14 +28,16 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     }
     frame = requestAnimationFrame(raf);
 
-    // Anchor links go through Lenis for a smooth glide.
+    // Anchor links (both "#id" and "/#id" while on the home page) glide via Lenis.
     const handleAnchor = (e: Event) => {
       const target = (e.target as HTMLElement).closest(
-        'a[href^="#"]'
+        'a[href^="#"], a[href^="/#"]'
       ) as HTMLAnchorElement | null;
       if (!target) return;
-      const id = target.getAttribute("href");
+      const href = target.getAttribute("href") ?? "";
+      const id = href.startsWith("/#") ? href.slice(1) : href;
       if (!id || id === "#") return;
+      if (href.startsWith("/#") && window.location.pathname !== "/") return;
       const el = document.querySelector(id);
       if (el) {
         e.preventDefault();

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import WaitlistForm from "./WaitlistForm";
+import { openDownloadModal } from "./DownloadModal";
 import MoriCharacter from "./MoriCharacter";
 import { ForestFloor, Spores, DriftingLeaves } from "./ForestAtmosphere";
 import { usePrefersReducedMotion } from "@/lib/hooks";
@@ -77,7 +78,10 @@ export default function FinalCTA() {
           {/* direct beta download */}
           <a
             href="/downloads/Mori-0.1.0-beta.zip"
-            download
+            onClick={(e) => {
+              e.preventDefault();
+              openDownloadModal();
+            }}
             className="group inline-flex items-center gap-2.5 rounded-full bg-forest px-7 py-3.5 text-base font-medium text-background shadow-soft transition-colors duration-300 hover:bg-[#263d2d]"
           >
             <svg width="15" height="16" viewBox="0 0 15 16" fill="none" aria-hidden="true">

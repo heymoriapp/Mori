@@ -6,10 +6,11 @@ import MoriLogo from "./MoriLogo";
 import MagneticButton from "./MagneticButton";
 
 const NAV = [
-  { label: "How it works", href: "#how" },
-  { label: "Memory", href: "#memory" },
-  { label: "Privacy", href: "#privacy" },
-  { label: "FAQ", href: "#faq" },
+  { label: "How it works", href: "/#how" },
+  { label: "Memory", href: "/#memory" },
+  { label: "Docs", href: "/docs" },
+  { label: "Download", href: "/download" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 export default function Header() {
@@ -39,7 +40,7 @@ export default function Header() {
           scrolled ? "h-14" : "h-20"
         }`}
       >
-        <a href="#top" aria-label="Mori home" className="shrink-0">
+        <a href="/" aria-label="Mori home" className="shrink-0">
           <MoriLogo markSize={scrolled ? 22 : 26} />
         </a>
 
@@ -58,7 +59,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <MagneticButton href="#beta" variant="primary" className="!px-5 !py-2.5 !text-sm">
+          <MagneticButton href="/#beta" variant="primary" className="!px-5 !py-2.5 !text-sm">
             Join beta
           </MagneticButton>
         </div>
@@ -113,7 +114,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="#beta"
+                href="/#beta"
                 onClick={() => setMenuOpen(false)}
                 className="mt-2 rounded-full bg-forest px-5 py-3 text-center text-sm font-medium text-background"
               >
