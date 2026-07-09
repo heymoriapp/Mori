@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  Mori runs WITHOUT the App Sandbox on purpose. A menu-bar writing companion
+	  needs to read selected text from other apps (Accessibility) and post a
+	  Cmd+V key event to insert text. The App Sandbox blocks both. Distribution
+	  is therefore Developer ID + notarization (or local run), not the Mac App Store.
+	-->
+	<key>com.apple.security.app-sandbox</key>
+	<false/>
+	<!-- Network access for the user's chosen AI provider -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf7ef;
+  --card: #fffdf8;
+  --ink: #12110e;
+  --muted: #706b63;
+  --forest: #2f4a37;
+  --moss: #9caf88;
+  --clay: #d96b3c;
+  --border: #e7e0d2;
+  --soft-green: #dde8d3;
+  --soft-clay: #f6d8c6;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Paper grain — extremely subtle */
+.paper-grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.label {
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+}
+
+::selection {
+  background: var(--soft-green);
+  color: var(--forest);
+}
+
+/* Focus visibility */
+:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Forest atmosphere ---------------------------------------------------- */
+@keyframes spore-rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--spore-opacity, 0.5);
+  }
+  50% {
+    transform: translate3d(var(--spore-drift, 12px), -52%, 0) scale(1);
+  }
+  90% {
+    opacity: var(--spore-opacity, 0.5);
+  }
+  100% {
+    transform: translate3d(0, -104%, 0) scale(0.9);
+    opacity: 0;
+  }
+}
+
+.spore {
+  position: absolute;
+  border-radius: 9999px;
+  will-change: transform, opacity;
+  animation: spore-rise var(--spore-duration, 16s) ease-in-out infinite;
+  animation-delay: var(--spore-delay, 0s);
+}
+
+@keyframes leaf-drift {
+  0% {
+    transform: translate3d(0, -8%, 0) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.55;
+  }
+  88% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate3d(var(--leaf-x, 40px), 112%, 0) rotate(320deg);
+    opacity: 0;
+  }
+}
+
+.leaf-fall {
+  position: absolute;
+  will-change: transform, opacity;
+  animation: leaf-drift var(--leaf-duration, 18s) linear infinite;
+  animation-delay: var(--leaf-delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spore,
+  .leaf-fall {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
