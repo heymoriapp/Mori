@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import MoriMark from "./MoriMark";
+import MoriMascot from "./MoriMascot";
 import { SITE } from "@/lib/site";
 
 const EVENT = "mori:download-modal";
@@ -92,12 +92,7 @@ export default function DownloadModal() {
             </button>
 
             <div className="flex flex-col items-center text-center">
-              <motion.div
-                animate={{ y: [0, -5, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <MoriMark size={52} />
-              </motion.div>
+              <MoriMascot size={72} float alt="The Mori mascot" />
 
               <h3 className="mt-4 font-serif text-2xl font-medium text-ink">
                 {started ? "Your download has started" : "Downloading Mori beta…"}

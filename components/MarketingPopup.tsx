@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import MoriMark from "./MoriMark";
+import MoriMascot from "./MoriMascot";
 import WaitlistForm from "./WaitlistForm";
 import { openDownloadModal } from "./DownloadModal";
 
@@ -74,13 +74,9 @@ export default function MarketingPopup() {
           </button>
 
           <div className="flex items-start gap-3.5">
-            <motion.div
-              animate={{ y: [0, -4, 0] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-              className="shrink-0"
-            >
-              <MoriMark size={40} />
-            </motion.div>
+            <div className="shrink-0">
+              <MoriMascot size={56} float alt="The Mori mascot" />
+            </div>
             <div>
               <p className="font-serif text-lg font-medium leading-snug text-ink">
                 Take the memory spirit home.

@@ -6,7 +6,7 @@ import AnimatedText from "./AnimatedText";
 import FloatingReplyCard from "./FloatingReplyCard";
 import WaitlistForm from "./WaitlistForm";
 import { openDownloadModal } from "./DownloadModal";
-import MoriCharacter from "./MoriCharacter";
+import MoriMascot from "./MoriMascot";
 import { Spores } from "./ForestAtmosphere";
 import { usePrefersReducedMotion } from "@/lib/hooks";
 
@@ -38,16 +38,15 @@ export default function HeroSection() {
 
       {/* the forest guardian — the emotional anchor of the page */}
       <div
-        className="pointer-events-none absolute left-1/2 top-[8%] -z-10 w-[320px] -translate-x-1/2 opacity-40 sm:left-[2%] sm:top-[56%] sm:w-[390px] sm:-translate-x-0 sm:-translate-y-1/2 sm:opacity-95 lg:w-[440px] lg:left-[0%]"
+        className="pointer-events-none absolute left-1/2 top-[4%] -z-10 w-[248px] -translate-x-1/2 opacity-[0.18] sm:left-[1%] sm:top-[56%] sm:w-[370px] sm:-translate-x-0 sm:-translate-y-1/2 sm:opacity-100 lg:w-[420px] lg:left-[0%]"
         aria-hidden="true"
       >
-        <MoriCharacter
-          size={460}
-          breathing
+        <MoriMascot
+          float
           glow
-          followCursor
-          eyesFollow
-          className="h-auto w-full"
+          parallax
+          priority
+          sizes="(max-width: 640px) 300px, 420px"
         />
       </div>
 

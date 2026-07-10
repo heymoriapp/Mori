@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import WaitlistForm from "./WaitlistForm";
 import { openDownloadModal } from "./DownloadModal";
-import MoriCharacter from "./MoriCharacter";
+import MoriMascot from "./MoriMascot";
 import { ForestFloor, Spores, DriftingLeaves } from "./ForestAtmosphere";
 import { usePrefersReducedMotion } from "@/lib/hooks";
 
@@ -39,32 +39,26 @@ export default function FinalCTA() {
       <Spores count={14} color="#8AA277" />
       <DriftingLeaves count={6} />
 
-      {/* the guardian, met in the clearing — peeks softly over the card */}
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.4 }}
-        transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-none absolute bottom-[40%] left-1/2 -z-10 w-[280px] -translate-x-1/2 sm:w-[320px]"
-        aria-hidden="true"
-      >
-        <MoriCharacter
-          size={320}
-          breathing
-          glow
-          eyesFollow
-          className="h-auto w-full"
-        />
-      </motion.div>
-
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         animate={reduced ? undefined : { y: [0, -6, 0] }}
-        className="relative mx-auto mt-24 max-w-2xl rounded-3xl border border-border bg-card/80 p-10 text-center shadow-float backdrop-blur-md sm:mt-28 sm:p-14"
+        className="relative mx-auto mt-32 max-w-2xl rounded-3xl border border-border bg-card/80 p-10 text-center shadow-float backdrop-blur-md sm:mt-40 sm:p-14"
       >
+        {/* the guardian, met in the clearing — sits on the card's top edge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="pointer-events-none absolute -top-[104px] left-1/2 z-10 w-[124px] -translate-x-1/2 sm:-top-[122px] sm:w-[146px]"
+          aria-hidden="true"
+        >
+          <MoriMascot glow sizes="146px" />
+        </motion.div>
+
         <span className="label text-moss">private beta</span>
         <h2 className="mt-5 font-serif text-4xl font-medium leading-tight tracking-tight text-ink sm:text-5xl">
           Try Mori for Mac.

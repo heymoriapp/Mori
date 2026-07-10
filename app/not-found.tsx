@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MoriCharacter from "@/components/MoriCharacter";
+import MoriMascot from "@/components/MoriMascot";
 
 export default function NotFound() {
   return (
     <>
       <Header />
       <main className="flex min-h-screen flex-col items-center justify-center px-5 pb-24 pt-32 text-center">
-        <MoriCharacter size={200} breathing glow className="h-auto w-[180px]" />
+        <MoriMascot size={188} float glow alt="A lost little Mori spirit" />
         <p className="label mt-8 text-clay">404</p>
         <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-ink sm:text-5xl">
           This path is lost in the forest.

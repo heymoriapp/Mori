@@ -46,6 +46,26 @@ export const metadata: Metadata = {
     url: "https://heymori.app",
     siteName: "mori",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "mori — a little memory spirit for your Mac",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "mori — a little memory spirit for your Mac",
+    description:
+      "One key to remember every conversation. Private by design. Mac-first.",
+    images: ["/og.png"],
+  },
+  verification: {
+    other: {
+      "ory-verify": "orynth-23237887ffb44aa8ab85a26d3bfb4ae7",
+    },
   },
 };
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import MoriIcon from "@/components/MoriIcon";
+import MoriMascot from "@/components/MoriMascot";
 import { openDownloadModal } from "@/components/DownloadModal";
 import { SITE } from "@/lib/site";
 
@@ -14,13 +14,9 @@ export default function DownloadHero() {
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className="flex flex-col items-center gap-6 rounded-3xl border border-border bg-card p-10 text-center shadow-card sm:flex-row sm:text-left"
     >
-      <motion.div
-        animate={{ y: [0, -6, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="shrink-0"
-      >
-        <MoriIcon size={96} variant="forest" radius={22} title="Mori app icon" />
-      </motion.div>
+      <div className="shrink-0">
+        <MoriMascot size={116} float alt="The Mori mascot" />
+      </div>
 
       <div className="flex-1">
         <h2 className="font-serif text-2xl font-medium text-ink">
