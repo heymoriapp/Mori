@@ -101,16 +101,20 @@ export default function FinalCTA() {
 
           {/* install steps */}
           <div className="mt-6 w-full max-w-md rounded-2xl border border-border bg-background/70 p-4 text-left">
-            <p className="label mb-2.5 text-forest">Install in 30 seconds</p>
+            <p className="label mb-2.5 text-forest">Install in 60 seconds</p>
             <ol className="space-y-1.5 text-sm leading-relaxed text-muted">
               <li>
-                <span className="font-medium text-ink">1.</span> Unzip and drag{" "}
-                <span className="text-ink">Mori.app</span> into Applications.
+                <span className="font-medium text-ink">1.</span> Unzip, drag{" "}
+                <span className="text-ink">Mori.app</span> into Applications, open
+                it — macOS shows a &ldquo;not verified&rdquo; notice. Click{" "}
+                <span className="text-ink">Done</span>.
               </li>
               <li>
                 <span className="font-medium text-ink">2.</span>{" "}
-                <span className="text-ink">Right-click → Open</span> the first time
-                (the beta isn&rsquo;t notarized yet).
+                <span className="text-ink">
+                  System Settings → Privacy &amp; Security → Open Anyway
+                </span>{" "}
+                (standard for early betas — notarized build coming).
               </li>
               <li>
                 <span className="font-medium text-ink">3.</span> Add your AI key in

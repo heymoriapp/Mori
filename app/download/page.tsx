@@ -41,8 +41,18 @@ export default function DownloadPage() {
               <strong>Mori.app</strong> into your Applications folder.
             </li>
             <li>
-              <strong>Right-click Mori.app → Open</strong>, then click Open in
-              the dialog. The beta is not notarized yet, so macOS asks once.
+              Open Mori. macOS will say it{" "}
+              <strong>could not verify &ldquo;Mori&rdquo; is free of malware</strong>{" "}
+              — this is the standard notice for betas that aren&rsquo;t notarized
+              with Apple yet, not a malware finding. Click{" "}
+              <strong>Done</strong> (not &ldquo;Move to Trash&rdquo;).
+            </li>
+            <li>
+              Open <strong>System Settings → Privacy &amp; Security</strong>,
+              scroll to the bottom, and click{" "}
+              <strong>&ldquo;Open Anyway&rdquo;</strong> next to the Mori notice.
+              Confirm with your password or Touch ID. macOS remembers this — it
+              only happens once.
             </li>
             <li>
               Look for the <strong>leaf icon in your menu bar</strong> — Mori is
@@ -53,6 +63,13 @@ export default function DownloadPage() {
               permission, memory.
             </li>
           </ol>
+          <p>
+            <strong>Prefer Terminal?</strong> This one-liner clears the
+            quarantine flag instead of steps 2–3:
+          </p>
+          <pre className="overflow-x-auto rounded-xl border border-border bg-card p-4 font-mono text-xs leading-relaxed text-ink">
+            {`xattr -d com.apple.quarantine /Applications/Mori.app`}
+          </pre>
         </DocSection>
 
         <DocSection id="verify" title="Verify your download (optional)">
@@ -69,8 +86,8 @@ export default function DownloadPage() {
           <ul className="list-disc space-y-1.5 pl-5">
             <li>
               This build is <strong>ad-hoc signed, not notarized</strong> — hence
-              the one-time right-click → Open. A notarized build is on the
-              roadmap.
+              the one-time &ldquo;Open Anyway&rdquo; step above. A notarized
+              build (no dialogs at all) is the next release milestone.
             </li>
             <li>
               Selected-text capture and <Key>⌥M</Key> insert depend on the app

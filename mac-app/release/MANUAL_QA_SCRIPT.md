@@ -11,7 +11,7 @@ Mori (or reset state — see the last section) to exercise first-run.
 ## A. Fresh install
 1. Unzip `Mori-0.1.0-beta.zip`; move `Mori.app` to `/Applications`. → app present
 2. Double-click → Gatekeeper blocks it. → block shown (expected, unsigned)
-3. Right-click → **Open** → **Open**. → app launches
+3. Open it → "Not Opened" dialog → **Done** → System Settings → Privacy & Security → **Open Anyway** → confirm. → app launches
 4. Confirm a **menu-bar** icon appears (top-right), no Dock icon. → menu-bar icon shows
 
 ## B. Onboarding

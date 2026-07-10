@@ -26,7 +26,7 @@ copy or insert**, with your memory kept on your Mac.
 
 ## Setup (2 minutes)
 
-1. Open Mori (right-click → Open the first time — see `INSTALL.md`).
+1. Open Mori (one-time "Open Anyway" in System Settings → Privacy & Security — see `INSTALL.md`).
 2. First launch walks you through 6 quick screens.
 3. **Preferences → AI**: choose a provider, paste your API key, **Test connection**.
 4. **Grant Accessibility** when prompted (needed to read selections and insert).
@@ -56,7 +56,7 @@ copy or insert**, with your memory kept on your Mac.
 - Memory recall is **keyword-based** (embeddings are on the roadmap).
 - One request per generation; **no streaming** yet.
 - This build is **ad-hoc signed** (not notarized) — Gatekeeper needs a
-  right-click → Open the first time.
+  a one-time "Open Anyway" in System Settings → Privacy & Security.
 - After each rebuild, macOS may ask you to **re-grant Accessibility** (the
   ad-hoc signature changes).
 

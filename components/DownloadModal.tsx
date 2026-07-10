@@ -112,19 +112,33 @@ export default function DownloadModal() {
               <ol className="space-y-1.5 text-sm leading-relaxed text-muted">
                 <li>
                   <span className="font-medium text-ink">1.</span> Unzip and drag{" "}
-                  <span className="text-ink">Mori.app</span> into Applications.
+                  <span className="text-ink">Mori.app</span> into Applications,
+                  then open it.
                 </li>
                 <li>
-                  <span className="font-medium text-ink">2.</span>{" "}
-                  <span className="text-ink">Right-click → Open</span> the first
-                  time — the beta isn&rsquo;t notarized yet.
+                  <span className="font-medium text-ink">2.</span> macOS will say
+                  it can&rsquo;t verify Mori — click{" "}
+                  <span className="text-ink">Done</span> (not Move to Trash!).
                 </li>
                 <li>
-                  <span className="font-medium text-ink">3.</span> Add your AI key
+                  <span className="font-medium text-ink">3.</span> Open{" "}
+                  <span className="text-ink">
+                    System Settings → Privacy &amp; Security
+                  </span>
+                  , scroll down, click{" "}
+                  <span className="text-ink">Open Anyway</span>, and confirm.
+                </li>
+                <li>
+                  <span className="font-medium text-ink">4.</span> Add your AI key
                   in Preferences → AI, then press{" "}
                   <span className="font-mono text-xs text-forest">⌥M</span>.
                 </li>
               </ol>
+              <p className="mt-3 border-t border-border pt-2.5 text-xs leading-relaxed text-muted/90">
+                The warning appears because this beta isn&rsquo;t notarized with
+                Apple yet — it&rsquo;s the standard dialog for early betas, not a
+                malware verdict. One &ldquo;Open Anyway&rdquo; and macOS remembers.
+              </p>
             </div>
 
             <div className="mt-5 flex items-center justify-center gap-4 text-sm">

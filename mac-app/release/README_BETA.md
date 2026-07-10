@@ -22,7 +22,7 @@ This folder is what you hand to beta testers.
 ## 60-second start (testers)
 
 1. Unzip `Mori-0.1.0-beta.zip`, move **Mori.app** to `/Applications`.
-2. **Right-click → Open** the first time, then **Open** in the dialog
+2. Open it → click **Done** on the "could not verify" notice → System Settings → Privacy & Security → **Open Anyway**
    (this build isn't notarized yet — see `INSTALL.md`).
 3. Follow the 6 onboarding screens.
 4. **Preferences → AI** → add your provider API key → **Test connection**.

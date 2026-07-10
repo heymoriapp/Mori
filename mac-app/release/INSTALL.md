@@ -8,17 +8,25 @@ key for your AI provider (OpenAI-compatible or Anthropic).
 ### Install
 
 1. Unzip `Mori-0.1.0-beta.zip`.
-2. Drag **Mori.app** into your **Applications** folder.
-3. This beta is **ad-hoc signed, not notarized**, so Gatekeeper will block the
-   first open. Do one of these:
-   - **Right-click Mori.app → Open**, then click **Open** in the dialog; **or**
+2. Drag **Mori.app** into your **Applications** folder and open it.
+3. This beta is **ad-hoc signed, not notarized**, so Gatekeeper shows
+   *"Apple could not verify Mori is free of malware"*. To open:
+   - Click **Done** (not "Move to Trash"), then go to
+     **System Settings → Privacy & Security**, scroll down, click
+     **Open Anyway**, and confirm. One time only. **Or**
    - Terminal:
      ```bash
      xattr -dr com.apple.quarantine /Applications/Mori.app
      open /Applications/Mori.app
      ```
+   - Note: on macOS 15 (Sequoia) the old right-click → Open bypass no longer
+     works — use one of the two paths above.
 4. Mori is a **menu-bar app** — look for the leaf/guardian icon at the top-right,
    not in the Dock. (A Dock icon appears only while a window like Preferences is open.)
+
+> **Removing this dialog entirely** requires Developer ID signing + notarization
+> — now fully scripted in `../notarize-app.sh` (one-time Apple Developer setup
+> in its header, then one command per release).
 
 ### First run
 
@@ -80,7 +88,7 @@ hdiutil create -volname "Mori" -srcfolder build/Mori.app -ov -format UDZO \
 
 ### Make it install cleanly (Developer ID + notarization)
 
-The ad-hoc build requires the right-click-Open workaround. To remove that for a
+The ad-hoc build requires the "Open Anyway" workaround. To remove that for a
 wider beta, sign with a **Developer ID Application** certificate and notarize.
 This needs **Xcode / a paid Apple Developer account** (the license must be
 accepted: `sudo xcodebuild -license accept`).

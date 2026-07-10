@@ -57,9 +57,11 @@ export default function DocsPage() {
           <p>
             <strong>Install:</strong> download the beta from the{" "}
             <a className="text-forest underline-offset-4 hover:underline" href="/download">download page</a>, unzip, drag{" "}
-            <strong>Mori.app</strong> to Applications, and{" "}
-            <strong>right-click → Open</strong> the first time (the beta
-            isn&rsquo;t notarized yet). The six onboarding screens walk you
+            <strong>Mori.app</strong> to Applications, and open it. macOS will
+            show a &ldquo;could not verify&rdquo; notice (the beta isn&rsquo;t
+            notarized yet) — click <strong>Done</strong>, then go to{" "}
+            <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>{" "}
+            and confirm. One time only. The six onboarding screens walk you
             through the rest.
           </p>
           <p>
@@ -242,9 +244,13 @@ export default function DocsPage() {
         <DocSection id="troubleshooting" title="Troubleshooting">
           <ul className="space-y-3">
             <li>
-              <strong>&ldquo;Mori.app can&rsquo;t be opened&rdquo;</strong> —
-              right-click the app → Open → Open. This is macOS Gatekeeper on
-              non-notarized betas, expected for now.
+              <strong>&ldquo;Mori Not Opened / could not verify&rdquo;</strong> —
+              macOS Gatekeeper on non-notarized betas, expected for now. Click{" "}
+              <strong>Done</strong>, then System Settings → Privacy &amp;
+              Security → <strong>Open Anyway</strong> → confirm. (On macOS 15,
+              the old right-click → Open trick no longer works — use Open
+              Anyway.) Terminal alternative:{" "}
+              <code>xattr -d com.apple.quarantine /Applications/Mori.app</code>
             </li>
             <li>
               <strong>⌥M doesn&rsquo;t read my selection</strong> — check

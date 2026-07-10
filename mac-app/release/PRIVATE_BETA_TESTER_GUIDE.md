@@ -27,10 +27,16 @@ This is a **controlled ~5-person private beta**. Please don't reshare the build.
 ## Download & install
 
 1. Unzip `Mori-0.1.0-beta.zip`.
-2. Drag **Mori.app** into **Applications**.
-3. This beta is **not notarized yet**, so Gatekeeper blocks the first open. Either:
-   - **Right-click Mori.app → Open**, then **Open** in the dialog, or
-   - Terminal: `xattr -dr com.apple.quarantine /Applications/Mori.app && open /Applications/Mori.app`
+2. Drag **Mori.app** into **Applications** and open it.
+3. This beta is **not notarized yet**, so macOS shows *"could not verify Mori is
+   free of malware"* — that's the standard notice for un-notarized betas, not a
+   malware finding. To open:
+   - Click **Done** (⚠️ not "Move to Trash"), then
+   - **System Settings → Privacy & Security** → scroll down → **Open Anyway** →
+     confirm with your password/Touch ID. One time only.
+   - Terminal alternative: `xattr -dr com.apple.quarantine /Applications/Mori.app && open /Applications/Mori.app`
+   - (On macOS 14 you can also right-click → Open; on macOS 15 that shortcut no
+     longer works — use Open Anyway.)
 4. Mori runs in the **menu bar** (top-right leaf/guardian icon) — not the Dock.
 
 On first launch you'll see a short 6-screen intro.
@@ -106,7 +112,7 @@ only when you press ⌥M.
 - **Insert** may fall back to **Copy** depending on the target app.
 - Global shortcuts are **fixed** (⌥M, ⌥⇧M) in this build.
 - Recall is **keyword-based** (no embeddings yet); no streaming yet.
-- Ad-hoc signed (right-click → Open the first time).
+- Ad-hoc signed (one-time System Settings → Privacy & Security → "Open Anyway").
 
 ## Privacy (short version)
 
