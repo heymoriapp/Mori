@@ -49,6 +49,20 @@ export default function Footer() {
             <p className="mt-4 max-w-xs text-[0.95rem] leading-relaxed text-muted">
               A little memory spirit for your Mac.
             </p>
+            <a
+              href="https://orynth.dev/projects/mori"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block transition-opacity duration-300 hover:opacity-80"
+            >
+              <img
+                src="https://orynth.dev/api/badge/mori?theme=light&style=default"
+                alt="Featured on Orynth"
+                width={260}
+                height={80}
+                loading="lazy"
+              />
+            </a>
           </motion.div>
 
           {COLUMNS.map((col, i) => (
