@@ -14,7 +14,7 @@ import { usePrefersReducedMotion } from "@/lib/hooks";
  * popup). Tiny chrome (header, favicon) keeps the crisp vector mark instead —
  * same character, sharper at 22px.
  */
-const INTRINSIC_W = 611;
+const INTRINSIC_W = 637;
 const INTRINSIC_H = 640;
 
 export default function MoriMascot({
@@ -82,7 +82,7 @@ export default function MoriMascot({
         )}
         <img
           src="/mori-mascot.png"
-          srcSet="/mori-mascot-128.png 122w, /mori-mascot-256.png 244w, /mori-mascot.png 611w"
+          srcSet="/mori-mascot-128.png 127w, /mori-mascot-256.png 255w, /mori-mascot.png 637w"
           sizes={fixed ? `${size}px` : sizes}
           width={INTRINSIC_W}
           height={INTRINSIC_H}
