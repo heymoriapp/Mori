@@ -49,20 +49,36 @@ export default function Footer() {
             <p className="mt-4 max-w-xs text-[0.95rem] leading-relaxed text-muted">
               A little memory spirit for your Mac.
             </p>
-            <a
-              href="https://orynth.dev/projects/mori"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block transition-opacity duration-300 hover:opacity-80"
-            >
-              <img
-                src="https://orynth.dev/api/badge/mori?theme=light&style=default"
-                alt="Featured on Orynth"
-                width={260}
-                height={80}
-                loading="lazy"
-              />
-            </a>
+            <div className="mt-6 flex flex-col items-start gap-3">
+              <a
+                href="https://orynth.dev/projects/mori"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-opacity duration-300 hover:opacity-80"
+              >
+                <img
+                  src="https://orynth.dev/api/badge/mori?theme=light&style=default"
+                  alt="Featured on Orynth"
+                  width={260}
+                  height={80}
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.producthunt.com/products/mori-3?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-mori-4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-opacity duration-300 hover:opacity-80"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1194000&theme=light&t=1783814381395"
+                  alt="Mori - A private AI memory for your Mac. | Product Hunt"
+                  width={250}
+                  height={54}
+                  loading="lazy"
+                />
+              </a>
+            </div>
           </motion.div>
 
           {COLUMNS.map((col, i) => (
